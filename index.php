@@ -8,6 +8,9 @@
     <head>
       <title>Happy Family</title>
       <meta charset="utf-8">
+      <meta name="author" content="Mehran Gholizadeh">
+      <meta name="description" content="Add & Delete contacts">
+      <meta name="keywords" content="Add & Delete contacts,contacts,html,css,js,bootstrap,php and ...">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
       <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -26,12 +29,14 @@
                         <a class="nav-link active" aria-current="page" href="#">View Contacts</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Add new contact</a>
+                        <a class="nav-link"  aria-current="page" href="add_contact.php">Add new contact</a>
                       </li>
-                       <!-- Button trigger modal -->
-                          <button type="button" id="new_contact_btn" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            +
-                          </button>
+                      <li class="nav-item">
+                          <form action="delete_contacts.php" method="post">
+                          <a class="nav-link" href="delete_contacts.php">Delete Contact</a>
+                          </form>
+                      </li>
+                         
                     </ul>
                     <form class="d-flex">
                       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -69,36 +74,9 @@
               </div>  
               </div>
               </div>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add new contact</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form method="post" action="new_message.php">
-                      <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">First name</label>
-                        <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <label for="exampleInputEmail1" class="form-label">Last name</label>
-                        <input type="text" name="last_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <label for="exampleInputEmail1" class="form-label">Mobile number</label>
-                        <input type="text" name="mobile_num" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <label for="exampleInputEmail1" class="form-label">Phone number</label>
-                        <input type="text" name="phone_num" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      </div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
       </div>
-    
-<script src="js/bootstrap.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="js/bootstrap.js"></script>
     </body>
 </html>
